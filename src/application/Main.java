@@ -15,6 +15,10 @@ public class Main {
 		//janela.setLocationRelativeTo(null); Descomente caso queira nascer a tela no centro
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
+		SpaceInvaders spaceInvaders = new SpaceInvaders();
+		spaceInvaders.setBounds(0, 0, LARGURA, ALTURA);
+		janela.add(spaceInvaders);
+		
 	}
 
 }
