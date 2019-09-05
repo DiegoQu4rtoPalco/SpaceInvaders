@@ -7,7 +7,7 @@ public class Tiro {
 	
 	private int posicaoX, posicaoY, tamanhoX, tamanhoY;
 	
-	public Tiro() {
+	public Tiro(int indiceX, int indiceY) {
 		posicaoX = 625;
 		posicaoY = 50;
 		tamanhoX = 10;

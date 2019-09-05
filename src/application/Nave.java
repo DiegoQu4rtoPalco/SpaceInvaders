@@ -6,7 +6,7 @@ import java.awt.Graphics;
 public class Nave {
 	
 	private int posicaoX, posicaoY, tamanhoX, tamanhoY;
-	
+		
 	public Nave() {
 		posicaoX = 600;
 		posicaoY = 600;
@@ -19,8 +19,9 @@ public class Nave {
 		g.fillRect(posicaoX, posicaoY, tamanhoX, tamanhoY);
 	}
 	
-	public void atirar() {
-		System.out.println("Atirou");
+	public Tiro atirar() {
+		Tiro tiro = new Tiro(posicaoX, posicaoY);
+		return tiro;
 	}
 
 }

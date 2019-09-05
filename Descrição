@@ -6,4 +6,12 @@ para testar vamos deixar um println "Atirou"
 Na classe SpaceInvaders vamos implementar KeyListener e em 
 seguida adicione seus métodos e vamos dizer no método keyPressed
 se ele for igual a tecla space nave.atirar(). não esqueça de chamar
-a o objeto private Nave nave e instaciar no construtor
+o objeto private Nave nave e instaciar no construtor.
+
+Commit 07 - Fazendo a nave atirar
+
+Colocando a posicao de  tiro x e de y da classe Tiro nos paramentro do construtor
+indiceX e indiceY e instanciando no método atirar  na classe Nave e para testar
+na classe SpaceInvaders crie um objeto private Tiro tiro; e no método KeyPressed
+tiro fica igual, tiro nave atirar, pra não dar erro no método paintCompontent
+passe se tiro for diferente de nulo pintar tiro.

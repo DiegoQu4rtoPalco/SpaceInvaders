@@ -18,7 +18,7 @@ public class SpaceInvaders extends JPanel implements Runnable, KeyListener {
 		Thread processoDoJogo = new Thread(this);
 		processoDoJogo.start();
 		nave = new Nave();
-		tiro = new Tiro();
+		
 		
 	}
 
@@ -44,7 +44,9 @@ public class SpaceInvaders extends JPanel implements Runnable, KeyListener {
 
 	public void paintComponent(Graphics g) {
 		nave.pintar(g);
-		tiro.pintar(g);
+		if(tiro != null) {
+			tiro.pintar(g);
+		}
 	}
 
 	private void atualizar() {
@@ -55,7 +57,7 @@ public class SpaceInvaders extends JPanel implements Runnable, KeyListener {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if(e.getKeyCode() == KeyEvent.VK_SPACE) {
-			nave.atirar();
+			tiro = nave.atirar();
 		}
 		
 	}
