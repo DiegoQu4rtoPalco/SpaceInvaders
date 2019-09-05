@@ -1,21 +1,24 @@
 package application;
 
-import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import javax.swing.JPanel;
 
-public class SpaceInvaders extends JPanel implements Runnable {
+public class SpaceInvaders extends JPanel implements Runnable, KeyListener {
 	
 	private static final long serialVersionUID = 1L;
 	
 	private Nave nave;
+	private Tiro tiro;
 
 	
 	public SpaceInvaders() {
 		Thread processoDoJogo = new Thread(this);
 		processoDoJogo.start();
 		nave = new Nave();
+		tiro = new Tiro();
 		
 	}
 
@@ -41,10 +44,31 @@ public class SpaceInvaders extends JPanel implements Runnable {
 
 	public void paintComponent(Graphics g) {
 		nave.pintar(g);
+		tiro.pintar(g);
 	}
 
 	private void atualizar() {
 		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		if(e.getKeyCode() == KeyEvent.VK_SPACE) {
+			nave.atirar();
+		}
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		
+		
+	}
+
+	@Override
+	public void keyTyped(KeyEvent arg0) {
+	
 		
 	}
 		

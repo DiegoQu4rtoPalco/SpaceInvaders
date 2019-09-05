@@ -1,0 +1,9 @@
+Commit 06.
+
+Criando a classe Tiro e variaveis, construtor, método pintar.
+Na classe Nave vamos criar um método atirar, dentro do método
+para testar vamos deixar um println "Atirou"
+Na classe SpaceInvaders vamos implementar KeyListener e em 
+seguida adicione seus métodos e vamos dizer no método keyPressed
+se ele for igual a tecla space nave.atirar(). não esqueça de chamar
+a o objeto private Nave nave e instaciar no construtor

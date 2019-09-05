@@ -18,6 +18,7 @@ public class Main {
 		SpaceInvaders spaceInvaders = new SpaceInvaders();
 		spaceInvaders.setBounds(0, 0, LARGURA, ALTURA);
 		janela.add(spaceInvaders);
+		janela.addKeyListener(spaceInvaders);
 		
 	}
 
