@@ -8,11 +8,14 @@ import javax.swing.JPanel;
 public class SpaceInvaders extends JPanel implements Runnable {
 	
 	private static final long serialVersionUID = 1L;
+	
+	private Nave nave;
 
 	
 	public SpaceInvaders() {
 		Thread processoDoJogo = new Thread(this);
 		processoDoJogo.start();
+		nave = new Nave();
 		
 	}
 
@@ -37,8 +40,7 @@ public class SpaceInvaders extends JPanel implements Runnable {
 	}
 
 	public void paintComponent(Graphics g) {
-		g.setColor(Color.BLACK);
-		g.fillRect(50, 50, 100, 100);
+		nave.pintar(g);
 	}
 
 	private void atualizar() {
