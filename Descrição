@@ -15,3 +15,11 @@ indiceX e indiceY e instanciando no método atirar  na classe Nave e para testar
 na classe SpaceInvaders crie um objeto private Tiro tiro; e no método KeyPressed
 tiro fica igual, tiro nave atirar, pra não dar erro no método paintCompontent
 passe se tiro for diferente de nulo pintar tiro.
+
+commit 08 - Fazendo tiro subir até a posição de y da tela
+
+Criaremos uma variavel velocidade e mais outro método na classe Tiro chamado direcao
+dizeremos no método se posição de y for menor ou igual velocidade chamando no método 
+atualizar da clase SpaceInvaders se tiro for diferente de nulo nave direcao de y, observer
+o tiro ira subir até a posição de y, para poder limpar a tela adicione o super.paintComponent(g)
+no método paintComponent.

@@ -16,7 +16,7 @@ public class Nave {
 	
 	public void pintar(Graphics g) {
 		g.setColor(Color.BLACK);
-		g.fillRect(posicaoX, posicaoY, tamanhoX, tamanhoY);
+		g.fillRect(posicaoX - tamanhoX / 2, posicaoY, tamanhoX, tamanhoY);
 	}
 	
 	public Tiro atirar() {

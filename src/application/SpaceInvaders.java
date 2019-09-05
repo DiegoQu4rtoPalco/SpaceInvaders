@@ -43,6 +43,7 @@ public class SpaceInvaders extends JPanel implements Runnable, KeyListener {
 	}
 
 	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
 		nave.pintar(g);
 		if(tiro != null) {
 			tiro.pintar(g);
@@ -50,7 +51,9 @@ public class SpaceInvaders extends JPanel implements Runnable, KeyListener {
 	}
 
 	private void atualizar() {
-		// TODO Auto-generated method stub
+		if(tiro != null) {
+			tiro.direcaoY();
+		}
 		
 	}
 

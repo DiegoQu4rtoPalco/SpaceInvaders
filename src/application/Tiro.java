@@ -5,13 +5,14 @@ import java.awt.Graphics;
 
 public class Tiro {
 	
-	private int posicaoX, posicaoY, tamanhoX, tamanhoY;
+	private int posicaoX, posicaoY, tamanhoX, tamanhoY, velocidade;
 	
 	public Tiro(int indiceX, int indiceY) {
-		posicaoX = 625;
-		posicaoY = 50;
+		this.posicaoX = indiceX;
+		posicaoY = indiceY;
 		tamanhoX = 10;
 		tamanhoY = 50;
+		velocidade = 3;
 		
 	}
 	
@@ -20,6 +21,7 @@ public class Tiro {
 		g.fillRect(posicaoX, posicaoY, tamanhoX, tamanhoY);
 	}
 	
-	
-
+	public void direcaoY() {
+		posicaoY -= velocidade;
+	}
 }
