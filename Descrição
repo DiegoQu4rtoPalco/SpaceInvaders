@@ -23,3 +23,9 @@ dizeremos no método se posição de y for menor ou igual velocidade chamando no mé
 atualizar da clase SpaceInvaders se tiro for diferente de nulo nave direcao de y, observer
 o tiro ira subir até a posição de y, para poder limpar a tela adicione o super.paintComponent(g)
 no método paintComponent.
+
+Commit 08 - Modificando objeto Tiro para um ArrayList
+Mudaremos o objeto Tiro para um ArrayList para que tiro ao apertar em sequencia o tiro
+não suma, instanciando ao construtor percorrendo o com  o laço for dentro do método paintComponent 
+dando o valor da variavei i para tiro e em seguida pintar o mesmo se faz com o atualizar mais em vez 
+de pintar ira para direçãoY
