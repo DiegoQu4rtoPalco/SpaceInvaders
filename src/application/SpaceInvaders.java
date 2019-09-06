@@ -13,6 +13,7 @@ public class SpaceInvaders extends JPanel implements Runnable, KeyListener {
 	
 	private Nave nave;
 	private ArrayList <Tiro> tiro;
+	
 
 	
 	public SpaceInvaders() {
@@ -20,7 +21,6 @@ public class SpaceInvaders extends JPanel implements Runnable, KeyListener {
 		processoDoJogo.start();
 		nave = new Nave();
 		tiro = new ArrayList<Tiro>();
-		
 		
 	}
 
@@ -54,15 +54,19 @@ public class SpaceInvaders extends JPanel implements Runnable, KeyListener {
 	}
 
 	private void atualizar() {
+		nave.movimentar();
+		
 		for(int i = 0; i < tiro.size(); i++) {
 			tiro.get(i).direcaoY();
 		}
+		
+		System.out.println(tiro.size());
 		
 	}
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		if(e.getKeyCode() == KeyEvent.VK_SPACE) {
+		if(e.getKeyCode() == KeyEvent.VK_SPACE && nave.limite()) {
 			tiro.add(nave.atirar());
 		}
 		

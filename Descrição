@@ -24,8 +24,17 @@ atualizar da clase SpaceInvaders se tiro for diferente de nulo nave direcao de y
 o tiro ira subir até a posição de y, para poder limpar a tela adicione o super.paintComponent(g)
 no método paintComponent.
 
-Commit 08 - Modificando objeto Tiro para um ArrayList
+Commit 09 - Modificando objeto Tiro para um ArrayList
 Mudaremos o objeto Tiro para um ArrayList para que tiro ao apertar em sequencia o tiro
 não suma, instanciando ao construtor percorrendo o com  o laço for dentro do método paintComponent 
 dando o valor da variavei i para tiro e em seguida pintar o mesmo se faz com o atualizar mais em vez 
 de pintar ira para direçãoY
+
+Commit 10 - Limite de tiros adicionado
+Criar uma private boolean tiroLimite recebendo no construtor true, e no  método Nave atirar recebe
+false, criar método public boolean limite e retornar a variavel tiroLimite, ir na classe SpaceInvaders
+no método Keypressed e chamar método VK_SPACE && nave.limite(); e ir para o método atualizar da classe SpaceInvaders 
+e adicionar um método nave.movimentar(); em seguida criar o método movimentar na classe Nave e fazer função se tempo 
+for maior ou igual que frames tiroLimite recebe true, tempo passa a ser zero e depois da chaves tempo fica mais mais,
+adicione as seguinte variaveis private tempo, frames e que tempo recebe zero no construtor e frame recebe
+o valor que desejar no construtor.
