@@ -24,4 +24,8 @@ public class Tiro {
 	public void direcaoY() {
 		posicaoY -= velocidade;
 	}
+	
+	public boolean limite() {
+		return posicaoY <= 0;
+	}
 }

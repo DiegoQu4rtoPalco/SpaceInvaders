@@ -30,7 +30,7 @@ não suma, instanciando ao construtor percorrendo o com  o laço for dentro do mét
 dando o valor da variavei i para tiro e em seguida pintar o mesmo se faz com o atualizar mais em vez 
 de pintar ira para direçãoY
 
-Commit 10 - Limite de tiros adicionado
+Commit 10 - Limite de tiros adicionado.
 Criar uma private boolean tiroLimite recebendo no construtor true, e no  método Nave atirar recebe
 false, criar método public boolean limite e retornar a variavel tiroLimite, ir na classe SpaceInvaders
 no método Keypressed e chamar método VK_SPACE && nave.limite(); e ir para o método atualizar da classe SpaceInvaders 
@@ -38,3 +38,13 @@ e adicionar um método nave.movimentar(); em seguida criar o método movimentar na
 for maior ou igual que frames tiroLimite recebe true, tempo passa a ser zero e depois da chaves tempo fica mais mais,
 adicione as seguinte variaveis private tempo, frames e que tempo recebe zero no construtor e frame recebe
 o valor que desejar no construtor.
+
+Commit 11 - Adicionado classe Inimigo, limitando tiros.
+Crie uma nova classe Inimigos adicione construtor com parametro int indiceX e indeceY, crie variaveis private int posicaoX,
+posicaoY, tamanhoX, tamanhoY; posicaoX passa a ser indiceX, posicaoY passa a receber indiceY, coloque o tamanho desejado das
+variaveis no construtor, crie se o método pintar e passe seus valores das variaveis, na classe SpaceInvaders chame o método
+para pintar, não esqueça de chamar o objeto private Inimigos inimigo; e depois instanciando no construtor com sua posicao. 
+Agora iremos remover tiro quando chegar na posição de zero de Y, na classe Tiro criaremos uma método void boleana limite recebendo 
+a posicaoY se for menor ou igual a zero, chamaremos o método dentro da função de tiro na  variavel i na classe SpaceInvaders
+dizendo assim, se tiro na variavel i no método limite abre chaves tiro remove na variavel i, i--; isso fará que ao chegar na
+posicao de zero de Y tiro sera removido.
