@@ -13,7 +13,7 @@ public class SpaceInvaders extends JPanel implements Runnable, KeyListener {
 	
 	private Nave nave;
 	private ArrayList <Tiro> tiro;
-	private Inimigo inimigo;
+	private ArrayList<Inimigo> inimigo;
 	
 
 	
@@ -22,7 +22,11 @@ public class SpaceInvaders extends JPanel implements Runnable, KeyListener {
 		processoDoJogo.start();
 		nave = new Nave();
 		tiro = new ArrayList<Tiro>();
-		inimigo = new Inimigo(600, 50);
+		
+		inimigo = new ArrayList<Inimigo>();
+		for(int i = 0; i < 1; i++) {
+			inimigo.add(new Inimigo(600, 50));
+		}
 		
 	}
 
@@ -52,7 +56,9 @@ public class SpaceInvaders extends JPanel implements Runnable, KeyListener {
 		for(int i = 0; i < tiro.size(); i++) {
 			tiro.get(i).pintar(g);
 		}
-		inimigo.pintar(g);
+		for(int i = 0; i < inimigo.size(); i++) {
+			inimigo.get(i).pintar(g);
+		}
 		
 		
 	}
@@ -66,11 +72,20 @@ public class SpaceInvaders extends JPanel implements Runnable, KeyListener {
 				tiro.remove(i);
 				i--;
 			}
+			else {
+				for(int j = 0; j < inimigo.size(); j++) {
+					if(tiro.get(i).colisaoInimigo(inimigo.get(j))) {
+						tiro.remove(i);
+						inimigo.remove(j);
+						j--;
+						break;
+					}
+				}
+				}
+			
+			}
 		}
-				
-		System.out.println(tiro.size());
-		
-	}
+
 
 	@Override
 	public void keyPressed(KeyEvent e) {

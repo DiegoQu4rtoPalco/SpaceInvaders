@@ -48,3 +48,15 @@ Agora iremos remover tiro quando chegar na posição de zero de Y, na classe Tiro 
 a posicaoY se for menor ou igual a zero, chamaremos o método dentro da função de tiro na  variavel i na classe SpaceInvaders
 dizendo assim, se tiro na variavel i no método limite abre chaves tiro remove na variavel i, i--; isso fará que ao chegar na
 posicao de zero de Y tiro sera removido.
+
+Commit 12 - Inimigo a um Array e Colisão de Tiro com Inimigo.
+Vamos adicionar o objeto Inimigo inimigo ao um ArrayList para combinar varios inimigos na tela futuramente, ao adicionar o objeto
+vamos instanciar ao o ArrayList ao construtor e depois vamos adicionar o objeto inimigo.add(new Inimigos(600, 50); dentro de um laco 
+for dentro mesmo do construtor, agora iremos adicionar métodos getters das variaveis da classe Inimigo posicaoX, posicaoY, tamanhoX, tamanhoY
+para usarmos no método boolean de colisaoInimigo com parametros Inimigo inimigo na classe tiro e dizer na função se posicaoX for maior ou igual
+posicaoX do inimigo && posicaoX mais tamanhoX for menor ou igual posicao do inimigo mais tamanho do inimigoX dentro da outra função dizer se 
+posicaoX for menor ou igual posicaoY do inimigo mais tamanhoY do inimigo retorna verdadeiro se for false, pula duas chaves return false.
+Agora iremos atualizar na classe SpaceInvaders para usar o método acima, dizeremos depois do i-- } else {
+dentro de um laço for na variavel j a dentro de uma funcao se tiro na variavel i colidir com inimigo com paramentros inimigo na variavel j
+tiro remove na variavel i, inimigos remove na variavel j, j-- e um break;
+

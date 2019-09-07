@@ -6,6 +6,7 @@ import java.awt.Graphics;
 public class Tiro {
 	
 	private int posicaoX, posicaoY, tamanhoX, tamanhoY, velocidade;
+
 	
 	public Tiro(int indiceX, int indiceY) {
 		this.posicaoX = indiceX;
@@ -27,5 +28,14 @@ public class Tiro {
 	
 	public boolean limite() {
 		return posicaoY <= 0;
+	}
+	
+	public boolean colisaoInimigo(Inimigo inimigo) {
+		if(posicaoX >= inimigo.getPosicaoX() && posicaoX + tamanhoX <= inimigo.getPosicaoX() + inimigo.getTamanhoX()) {
+			if(posicaoY <= inimigo.getPosicaoY() + inimigo.getTamanhoY()) {
+				return true;
+			}
+		}
+		return false;
 	}
 }
