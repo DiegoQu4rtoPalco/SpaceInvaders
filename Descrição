@@ -60,3 +60,11 @@ Agora iremos atualizar na classe SpaceInvaders para usar o método acima, dizerem
 dentro de um laço for na variavel j a dentro de uma funcao se tiro na variavel i colidir com inimigo com paramentros inimigo na variavel j
 tiro remove na variavel i, inimigos remove na variavel j, j-- e um break;
 
+Commit 13 - Movimento da nave
+Crie se uma variavel int private direcao que o construtor receba valor de zero, no método KeyPressed dizer na funçao se  getKeyCode for igual
+KeyEvent.VK_D direcao recebe valor de 1, na outra funçao KeyEvent.VK_A direcao recebera o valor de -1, para que ao soltar da tecla acionada a nave deva 
+parar, teremos que adicionar no método KeyReleased direcao o valor de zero, tanto a letra D || como a letra A
+Agora na classe Nave no método Movimentar adicionaremos nos paramentros int valor para usar na função, dizer assim se valor for igual a 1 posicaoX += velocidade
+e se velor for igual a -1 posicaoY -= velocidade e em seguida criar variavel velocidade adicionar ao construtor o valor desejavel, para terminar ir na classe SpaceInvaders
+no método atualizar, método que chama movimentar adicionar a variavel direcao dentro dos paramentros.
+

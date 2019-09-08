@@ -5,7 +5,7 @@ import java.awt.Graphics;
 
 public class Nave {
 	
-	private int posicaoX, posicaoY, tamanhoX, tamanhoY;
+	private int posicaoX, posicaoY, tamanhoX, tamanhoY, velocidade;
 	private boolean tiroLimite;
 	private int tempo, frames;
 		
@@ -15,6 +15,7 @@ public class Nave {
 		tamanhoX = 100;
 		tamanhoY = 90;
 		tiroLimite = true; tempo = 0; frames = 20;
+		velocidade = 3;
 		
 	}
 	
@@ -29,7 +30,14 @@ public class Nave {
 		return tiro;
 	}
 	
-	public void movimentar() {
+	public void movimentar(int valor) {
+		
+		if( valor == 1) {
+			posicaoX += velocidade;
+		}
+		else if(valor == - 1) {
+			posicaoX -= velocidade;
+		}
 		
 		if(tempo >= frames) {
 			tiroLimite = true;
