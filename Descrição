@@ -68,3 +68,8 @@ Agora na classe Nave no método Movimentar adicionaremos nos paramentros int valo
 e se velor for igual a -1 posicaoY -= velocidade e em seguida criar variavel velocidade adicionar ao construtor o valor desejavel, para terminar ir na classe SpaceInvaders
 no método atualizar, método que chama movimentar adicionar a variavel direcao dentro dos paramentros.
 
+14 - Movimentando inimigo.
+Para movimentar para direira o inimigo e fazer nascer no inicio, cria se uma variavel velocidade na classe Inimigo, caso não tenha, depois cria se um método
+movimentar, nesse métido vamos dizer que a posiçao de X e += velocidade, e que na funçaõ if direi que se posicaoX for >= que o tamanho da tela no caso aqu no 
+meu 1366, dentro da chaves recebe posicao de X zero e depois das chaves posicao de X recebe ++, para percorrer até o final e assim ficar nascendo todas vez no
+inicio.

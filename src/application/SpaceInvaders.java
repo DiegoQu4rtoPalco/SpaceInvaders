@@ -68,6 +68,10 @@ public class SpaceInvaders extends JPanel implements Runnable, KeyListener {
 	private void atualizar() {
 		nave.movimentar(direcao);
 		
+		for(int i = 0; i < inimigo.size(); i++) {
+			inimigo.get(i).movimentar();
+		}
+
 		for(int i = 0; i < tiro.size(); i++) {
 			tiro.get(i).direcaoY();
 			if(tiro.get(i).limite()) {
