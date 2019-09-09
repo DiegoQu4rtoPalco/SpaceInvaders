@@ -5,14 +5,16 @@ import java.awt.Graphics;
 
 public class Inimigo {
 	
-	private int posicaoX, posicaoY, tamanhoX, tamanhoY, velocidade;
+	private int posicaoX, posicaoY, tamanhoX, tamanhoY, velocidade, direcao;
 	
-	public Inimigo(int indiceX, int indiceY) {
+	public Inimigo(int indiceX, int indiceY, int direcao) {
 		this.posicaoX = indiceX;
 		this.posicaoY = indiceY;
+		this.direcao = direcao;
 		tamanhoX = 45;
 		tamanhoY = 45;
 		velocidade = 2;
+		
 	}
 	
 	public void pintar(Graphics g) {
@@ -22,11 +24,12 @@ public class Inimigo {
 	}
 	
 	public void movimentar() {
-		posicaoX += velocidade;
-		if(posicaoX >= 1366) {
-			posicaoX = -50;
-		}
-		
+		posicaoX += velocidade * direcao;
+	}
+	
+	public void trocaDirecao() {
+		direcao = direcao *= -1;
+		posicaoY+= 20;
 	}
 	
 	public int getPosicaoX() {

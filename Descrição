@@ -76,5 +76,12 @@ inicio.
 
 15 - Adicionando mais inimigos
 Na classe inimigos vamos alterear o tamanho do inimigo para 45 já na classe SpaceInvaders no contrutor, vamos mudar a posicaoX para 50 + i%20 * 50 e na posicaoY 
-50 + i/20 * 50, execute o jogo observe varios inimigos na tela indo até o final e nascendo na posicao zero. 
+50 + i/20 * 50, execute o jogo observe varios inimigos na tela indo até o final e nascendo na posicao zero.
+
+Commit 16 - Segunda parte da Movimentaçao do inimigo. 
+Vamos fazer outra lógica dos inimigos em vez de ele nascer na posicao Zero vamos fazer ele bater e voltar, após ir descendo conforme a velocidade do inimigos
+na classe Inimigo vamos adicionar a variavel direcao, adicone ao construtor paramentro int direcao e chame a ela mesmo no this, velocidade fica desejavel 
+alterando método movimentar, passando posicaoX += velocidade * direcao, criando outro método trocaDirecao aonde direcao = direcao *= -1; posicao += 20; atualizando
+a classe SpaceInvaders no método atualizar, usando o laço for para percorrer o variavel i do inimigo, se inimigo na variavel i, na posicaoX <= 0 ou || inimigo na
+variavel i na posicaoX >= 1366 - o tamanho do inimigo, outro laço for para percorrer a variavel j de inimigo, inimigo na variavel j trocaDirecao após chaves um break.
 
