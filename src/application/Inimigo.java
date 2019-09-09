@@ -10,8 +10,8 @@ public class Inimigo {
 	public Inimigo(int indiceX, int indiceY) {
 		this.posicaoX = indiceX;
 		this.posicaoY = indiceY;
-		tamanhoX = 80;
-		tamanhoY = 80;
+		tamanhoX = 45;
+		tamanhoY = 45;
 		velocidade = 2;
 	}
 	
@@ -24,9 +24,9 @@ public class Inimigo {
 	public void movimentar() {
 		posicaoX += velocidade;
 		if(posicaoX >= 1366) {
-			posicaoX = 0;
+			posicaoX = -50;
 		}
-		posicaoX++;
+		
 	}
 	
 	public int getPosicaoX() {

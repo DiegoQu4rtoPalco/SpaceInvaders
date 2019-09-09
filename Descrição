@@ -73,3 +73,8 @@ Para movimentar para direira o inimigo e fazer nascer no inicio, cria se uma var
 movimentar, nesse métido vamos dizer que a posiçao de X e += velocidade, e que na funçaõ if direi que se posicaoX for >= que o tamanho da tela no caso aqu no 
 meu 1366, dentro da chaves recebe posicao de X zero e depois das chaves posicao de X recebe ++, para percorrer até o final e assim ficar nascendo todas vez no
 inicio.
+
+15 - Adicionando mais inimigos
+Na classe inimigos vamos alterear o tamanho do inimigo para 45 já na classe SpaceInvaders no contrutor, vamos mudar a posicaoX para 50 + i%20 * 50 e na posicaoY 
+50 + i/20 * 50, execute o jogo observe varios inimigos na tela indo até o final e nascendo na posicao zero. 
+
