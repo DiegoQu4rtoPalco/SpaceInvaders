@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
+import java.util.Random;
 
 import javax.swing.JPanel;
 
@@ -15,6 +16,7 @@ public class SpaceInvaders extends JPanel implements Runnable, KeyListener {
 	private ArrayList <Tiro> tiro;
 	private ArrayList<Inimigo> inimigo;
 	private int direcao;
+	
 	
 
 	
@@ -63,11 +65,15 @@ public class SpaceInvaders extends JPanel implements Runnable, KeyListener {
 			inimigo.get(i).pintar(g);
 		}
 		
+		TelaFundo telaFundo = new TelaFundo(new Random().nextInt(1366), new Random().nextInt(768));
+		telaFundo.pintar(g);
 		
 	}
 
 	private void atualizar() {
-		nave.movimentar(direcao);
+		if(nave != null) {
+			nave.movimentar(direcao);
+		}
 		
 		for(int i = 0; i < inimigo.size(); i++) {
 			inimigo.get(i).movimentar();

@@ -85,3 +85,10 @@ alterando método movimentar, passando posicaoX += velocidade * direcao, criando 
 a classe SpaceInvaders no método atualizar, usando o laço for para percorrer o variavel i do inimigo, se inimigo na variavel i, na posicaoX <= 0 ou || inimigo na
 variavel i na posicaoX >= 1366 - o tamanho do inimigo, outro laço for para percorrer a variavel j de inimigo, inimigo na variavel j trocaDirecao após chaves um break.
 
+Commit 17 - Acrescentando efeito estrelas no fundo da tela.
+Criando uma nova classe TelaFundo, novas variasveis posX, posY, tamX, tamY, aos parametros do construtor int indiceX, indiceY, dizer que posX é = indiceX, posY = indiceY,
+tamX = 10, tamaY = 10, adicionar novo método pintar com paramentros Graphics g, receber g.setColor(Color.DARK_GRAY), g.fillRect(posX, posY, tamX, tamY); classe terminada
+para fazer o efeito das estrelas, ir na classe SpaceInvaders adicionar diretoo ao método pintar TelaFundo telaFundo = new TelaFundo(new Random().nextInt(1366), new Random()
+.nextInt(768)); chamar classe para pintar telaFundo.pintar(g);
+
+
