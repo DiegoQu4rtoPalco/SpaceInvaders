@@ -91,4 +91,9 @@ tamX = 10, tamaY = 10, adicionar novo método pintar com paramentros Graphics g, 
 para fazer o efeito das estrelas, ir na classe SpaceInvaders adicionar diretoo ao método pintar TelaFundo telaFundo = new TelaFundo(new Random().nextInt(1366), new Random()
 .nextInt(768)); chamar classe para pintar telaFundo.pintar(g);
 
+Commit 18 - Rodar em todos computadores na mesma velocidade.
+Criando uma variavel a dentro do método run, long tempoInicial = System.currentTimeMills(); long tempoFinal = System.currentTimeMills(); long diferenca = 1000/60 - 
+(temposFinal - tempoInicial); dizer se diferenca for maior que zero, chamando método dorme recebendo a variavel  diferenca, diferenca também é adicionado nos 
+paramentros do método public void dorme (long diferenca){};
+
 

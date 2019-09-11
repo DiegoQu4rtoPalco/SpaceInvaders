@@ -37,14 +37,21 @@ public class SpaceInvaders extends JPanel implements Runnable, KeyListener {
 	@Override
 	public void run() {
 		while(true) {
+			
+			long tempoInicial = System.currentTimeMillis();
 			atualizar();
 			repaint();
-			dorme();
+			
+			long tempoFinal = System.currentTimeMillis();
+			long diferenca = 16 - (tempoFinal - tempoInicial);
+			if(diferenca > 0) {
+				dorme(diferenca);
+			}
 		}
 		
 	}
 	
-	private void dorme() {
+	private void dorme(long diferenca) {
 		try {
 			Thread.sleep(1000/60);
 		} catch (InterruptedException e) {
