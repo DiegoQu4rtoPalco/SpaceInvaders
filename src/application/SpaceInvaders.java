@@ -1,5 +1,7 @@
 package application;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -16,6 +18,9 @@ public class SpaceInvaders extends JPanel implements Runnable, KeyListener {
 	private ArrayList <Tiro> tiro;
 	private ArrayList<Inimigo> inimigo;
 	private int direcao;
+	private boolean ganhou;
+	private Font mensagemGanhou = new Font ("Consolas", Font.BOLD, 20);
+	
 	
 	
 
@@ -31,6 +36,7 @@ public class SpaceInvaders extends JPanel implements Runnable, KeyListener {
 			inimigo.add(new Inimigo(50 + i%20 * 50, 50 + i/20 * 50, 1));
 		}
 		direcao = 0;
+		ganhou = false;
 		
 	}
 
@@ -75,9 +81,19 @@ public class SpaceInvaders extends JPanel implements Runnable, KeyListener {
 		TelaFundo telaFundo = new TelaFundo(new Random().nextInt(1366), new Random().nextInt(768));
 		telaFundo.pintar(g);
 		
+		if(ganhou) {
+			g.setColor(Color.BLUE);
+			g.setFont(mensagemGanhou);
+			g.drawString("Você ganhou !!!", 550, 500);
+		}
+		
 	}
 
 	private void atualizar() {
+		if(inimigo.size() == 0) {
+			ganhou = true;
+		}
+		
 		if(nave != null) {
 			nave.movimentar(direcao);
 		}

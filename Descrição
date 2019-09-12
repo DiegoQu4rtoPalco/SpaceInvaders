@@ -96,4 +96,10 @@ Criando uma variavel a dentro do método run, long tempoInicial = System.currentT
 (temposFinal - tempoInicial); dizer se diferenca for maior que zero, chamando método dorme recebendo a variavel  diferenca, diferenca também é adicionado nos 
 paramentros do método public void dorme (long diferenca){};
 
+Commit 19 - Condiçao de vitória do jogador.
+Criar variavel boolean ganhou começando o jogo no construtor como false, na classe SpaceInvaders no método update dizer se quantidades de inimigos for igual a zero, 
+variavel boolean ganhou recebe true, criar condição no método paintCompnent se player ganhou frase em branco escrita Você ganhou !!! Criar variável private 
+Font mensagemGanhou = new Font ("Consolas", font.BOLD, 20); na condição g.setColor(Color.Blue); g.setFont(mensagemGanhou); g.drawString("Você ganhou !!!", 550, 500);
+
+
 
